@@ -1,0 +1,35 @@
+{% extends 'base.html' %}#this will be the template page
+
+
+
+
+{% block content %}
+
+<div class='sumsum'>
+    At Base Camp Coding Academy, we've implemented a collaborative team system that empowers our students and gives them more control over their educational experience. These teams, including management, procurement, community, and documentation, work harmoniously to provide resources, support, and essential networking skills. This integrated approach ensures that our students have the tools and knowledge they need to shape their educational journey and future success, giving them greater control over their learning and development.
+</div>
+<br>
+
+<div class='sideBySide'>
+    <div class='sumsum2'>
+        <h2>Reach out</h2>
+       
+       <p>Come for a <a class='colorChanger' href='https://www.google.com/maps/place/802+Central+St,+Water+Valley,+MS+38965/@34.1653373,-89.6303279,17z/data=!3m1!4b1!4m6!3m5!1s0x88806a1ce120e07f:0x29856707a1b41b48!8m2!3d34.1653329!4d-89.627753!16s%2Fg%2F11txj08fgy?entry=ttu'>visit</a></p>
+       <p>Check out our <a class='colorChanger' href='https://basecampcodingacademy.org/'>main website</a></p> 
+       
+       
+       
+        {% comment %} input Socials icons,a-tags,hover(showing name) {% endcomment %}
+    </div>
+    <hr class='hrPretty'>
+    <div class='sumsum2'>
+        <h2>Check out more about each of our teams.</h2>
+        <ul>
+            {% for i in teams %}
+                <li><a class='colorChanger' href='{% url 'findDetails' forloop.counter %}'>{{i.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
