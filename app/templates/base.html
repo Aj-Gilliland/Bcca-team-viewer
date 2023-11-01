@@ -3,17 +3,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Academy Leadership Teams</title>
+    <title>Deadlock Devs inc.</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel='stylesheet' href='{% static 'styles.css' %}'>
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" >
 </head>
 
 <body>
-    <div class='title'>
-        <a href='{% url 'home'%}' class='everythingElse'><h1>Base Camp Leadership Teams</h1></a>
-        <img class="image" src="{% static 'favicon.ico' %}" alt="Beautliful bcca kids">
+    <div>
+        <div class='adjust-invis'>
+            <a href='{% url 'home'%}' class='everythingElse'><h1>Deadlock Development</h1></a>
+            <img class="image" src="{% static 'favicon.ico' %}" alt="lovely deadlock logo">
+        </div>
+        <hr class='hrPretty'>
     </div>
+    <br>
     <br>
     <div class='everythingElse'>
         {% block content %}{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='sumsum'>
+    <h2 class='adjust-invis'>{{project.name}}</h2>
+    <p>{{project.description}}</p>
+</div>
+<br>
+<div class='sumsum'>
+    <h3 class='adjust-invis'>Meet the team on the project</h3>
+    <ul>
+        {% for i in project.people %}
+            <li>{{i}}</li>
+        {% endfor %}
+    </ul>
+</div>
+<br>
+   
+
+
+
+{% endblock content %}
+
+
+
+{% comment %} to see data being passed enter...
+<p>{{team}}</p> {% endcomment %}
+

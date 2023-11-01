@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='sumsum'>
+    At deadlock development our team strives to create content, ux, and ui that out-shines all outsoursed software. In doing so we make a point to do it with integirity, effecency, and the upmost detail. On top of that our team works with yours to get bigger projects done quicker and to your liking.
+</div>
+<br>
+
+<div class='sideBySide'>
+    <div class='sumsum2'>
+        <h2>Get a quote</h2>
+       
+       <p>Give us a call <br>
+        1-123-456-7891</p>
+       <p>Come for a <a class='colorChanger' href='https://www.google.com/maps/place/X+Corp.+HQ/@37.7765452,-122.4169669,17z/data=!3m2!4b1!5s0x80858085ada43c49:0x6ee05c6d5160ed26!4m6!3m5!1s0x8085809c6c8f4459:0xb10ed6d9b5050fa5!8m2!3d37.7765452!4d-122.4169669!16s%2Fg%2F1hf2gj_r3?entry=ttu'>visit</a></p> 
+       
+       
+       
+        {% comment %} input Socials icons,a-tags,hover(showing name) {% endcomment %}
+    </div>
+    <hr class='hrPretty'>
+    <div class='sumsum2'>
+        <h2>Check out some of our work.</h2>
+        <ul>
+            {% for i in projects %}
+                <li><a class='colorChanger' href='{% url 'findDetails' forloop.counter %}'>{{i.name}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
